@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star, Heart, Menu, Camera, Sparkles, Sprout } from "lucide-react";
@@ -29,8 +30,12 @@ const Index = () => {
             <a href="#gallery" className="hover:text-rose-500 transition-colors">Gallery</a>
             <a href="#testimonials" className="hover:text-rose-500 transition-colors">Testimonials</a>
             <a href="#contact" className="hover:text-rose-500 transition-colors">Contact</a>
-            <Button variant="outline" className="text-rose-500 border-rose-500 hover:bg-rose-500 hover:text-white">Vendor Login</Button>
-            <Button className="bg-rose-500 hover:bg-rose-600 text-white">Plan Your Wedding</Button>
+            <Link to="/login">
+              <Button variant="outline" className="text-rose-500 border-rose-500 hover:bg-rose-500 hover:text-white">Login</Button>
+            </Link>
+            <Link to="/login">
+              <Button className="bg-rose-500 hover:bg-rose-600 text-white">Plan Your Wedding</Button>
+            </Link>
           </nav>
           <Button variant="ghost" className="md:hidden">
             <Menu />
